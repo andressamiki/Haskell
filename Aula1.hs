@@ -33,7 +33,7 @@ auto = [ 2*x | x<-[0 .. 200]]
 auto2 :: [Int]
 auto2 = [ 2 * x | x <- [0 .. 201], x>=5, x<=190   ]
 
-exerc1 :: [Int]
+exerc1 :: [Int] 
 exerc1 = [2 * y + 1 | y<-[2 .. 10], y /= 7]
 
 exerc2 :: [Int] -> [Int]
@@ -56,7 +56,6 @@ outraLista2 = [ x ++ "AA" | x<-["OLA","MUNDO"] ]
 
 outraLista3 :: [String]
 outraLista3 = [x ++ "AA" | x<-["OLA", "MUNDO"]]
-
 
 ehPrimo :: Int -> Bool
 ehPrimo n = length ([x | x <- [2 .. (n-1)], mod n x == 0]) == 0
