@@ -1,0 +1,37 @@
+ Teste de mesa e saidas 
+ 1,2,3,4,5 Prova 
+ 
+ 
+ Prova victor, 7,8,extras
+ 
+ 
+ 
+ a) [10] >>= \x -> [9*x]                      [90]
+b) Just 0 >>= \x -> Just x                   Just 0
+c) Just 7 >>= return                         Just 7
+d) Just 10 >>= \x -> Just (5*x)              Just 50
+e) Just "OLA" >>= \x -> Just (x ++ " MUNDO")      Just ("ola mundo")
+h) Just 4 >>= \x -> Nothing                   Nothing 
+i) Nothing >>= \x -> Just (5*x)               Nothing
+j) Just 1 >>= \x -> Just (x+1) >>= \y -> Just(x+y)   Just 3
+
+
+do
+    x <- Just 1  
+    y <- Just (x+1) 
+    return (x+y)
+
+]
+
+module Aula8 where
+
+import Control.Monad
+
+imp :: Maybe Int
+imp = do
+    x <- Just 1  
+    y <- Just (x+1) 
+    return (x+y)
+
+func :: Maybe Int
+func = Just 1 >>= \x -> Just (x+1) >>= \y -> Just(x+y)

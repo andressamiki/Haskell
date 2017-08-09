@@ -1,0 +1,36 @@
+
+head - Obtem o primeiro elemento
+tipo: head :: [a] -> a
+
+tail - Obtem o corpo, tirando o primeiro elemento que eh o head
+tipo: tail :: [a] -> [a]
+
+length - verifica o tamanho
+tipo: length :: Foldable t => t a -> Int
+
+take - Pega um elemento
+tipo: take :: Int -> [a] -> [a]
+
+drop - Remove
+tipo: drop :: Int -> [a] -> [a]
+
+max - Pega o maior Elemento
+tipo: max :: Ord a => a -> a -> a
+
+min - Pega o menor elemento
+tipo: min :: Ord a => a -> a -> a
+
+sqrt -
+
+ fst - Retorna o primeiro componente de um par de tuplas
+ fst :: (a, b) -> a 
+ A declaração nos diz que o tipo do primeiro componente (da tupla) deve ser do mesmo que o do retorno,
+ mesmo a e b sendo diferentes tipos variáveis, eles não devem ser necessariamente de tipos diferentes.
+
+
+(==) :: (Eq a) => a -> a -> Bool  
+A funcao de igualdade recebe dois argumentos de mesmo tipo e retorna um Bool.
+
+
+elem :: (Eq a) => a -> [a] -> Bool
+de igualdade recebe um argumento do tipo variavel e outro do mesmo tipo em lista e retorna um Bool

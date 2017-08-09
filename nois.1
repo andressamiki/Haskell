@@ -1,0 +1,34 @@
+APLICACOES DE FUNCOES
+CASO 1:
+*Aula10> let f = \x -> 3*x
+
+*Aula10> f $ 3
+*Aula10> 
+9
+
+OBS: FUNCAO f E VALOR 3 ESTAO FORA DE UM FUNTOR
+
+CASO 2:
+*Aula10> let g = \x -> 3*x
+
+*Aula10> g <$> (Just 3)
+*Aula10> 
+Just 9
+
+OBS: FUNCAO g SEM FUNTOR, VALOR Just 3 COM FUNTOR
+
+CASO 3:
+*Aula10> let h = Just(\x -> 3*x)
+
+*Aula10> h <*> Just 3
+
+*Aula10> Just 9
+OBS: FUNCAO (Just h) e VALOR (Just 3) ESTAO COM FUNTOR
+
+
+(Branch (Just (\x -> 2*)) (Leaf (Just (\x -> 2*x))) (Leaf (Just (\x -> 2*x)))) <*> (Branch (Just 3) (Leaf (Just 2)) (Leaf (Just 1)))
+
+(Branch (Just (\x -> 2*x)) (Leaf (Just (\x -> 2*x))) (Leaf (Just (\x -> 2*x)))) <*> (Branch Just 3 (Leaf (Just 2)) (Leaf (Just 1)))
+
+
+
